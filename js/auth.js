@@ -48,7 +48,7 @@ async function login(user) {
     }
     if (data.jwtToken) {
       localStorage.setItem('jwtToken', data.jwtToken)
-      window.location.href = '/html/index.html'
+      window.location.href = '/'
     } else {
       console.log('No Token! Please check.')
       document.getElementById('errorMessage').textContent = 'Token Failed'
@@ -62,7 +62,7 @@ async function login(user) {
 function logout() {
   // Xóa JWT khỏi localStorage và chuyển hướng
   localStorage.removeItem('jwtToken')
-  window.location.href = '/html/login.html'
+  window.location.href = '/login'
   localStorage.setItem('logoutMessage', 'Logout succeeded!')
 }
 

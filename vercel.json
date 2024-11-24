@@ -1,28 +1,16 @@
 {
   "routes": [
     {
-      "src": "index.html",
-      "dest": "/html/index.html"
+      "src": "/",
+      "dest": "/index.html"
     },
     {
-      "src": "login.html",
-      "dest": "/html/login.html"
+      "src": "/login",
+      "dest": "/login.html"
     },
     {
-      "src": "register.html",
-      "dest": "/html/register.html"
-    },
-    {
-      "src": "/html/index.html",
-      "dest": "/html/index.html"
-    },
-    {
-      "src": "/html/login.html",
-      "dest": "/html/login.html"
-    },
-    {
-      "src": "/html/register.html",
-      "dest": "/html/register.html"
+      "src": "/register",
+      "dest": "/register.html"
     }
   ]
 }

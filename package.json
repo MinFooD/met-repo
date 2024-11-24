@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "scripts": {
     "start": "parcel html/index.html",
-    "build": "parcel build html/index.html --dist-dir build"
+    "build": "parcel build html/*.html --dist-dir build"
   },
   "devDependencies": {
     "parcel": "^2.13.0"
