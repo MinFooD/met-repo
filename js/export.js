@@ -24,7 +24,7 @@ async function exportExcel() {
     a.remove()
     window.URL.revokeObjectURL(url) // Giải phóng URL
     // Sau khi tải file xong, chuyển hướng về trang khác
-    window.location.href = '/'
+    window.location.href = '/html/index.html'
   } catch (error) {
     console.error('Có lỗi xảy ra:', error.message)
   }

@@ -4,7 +4,7 @@ const pageSize = 5
 const jwtToken = localStorage.getItem('jwtToken')
 // Nếu chưa có token, chuyển hướng về login.html
 if (!jwtToken) {
-  window.location.href = '/login'
+  window.location.href = '/html/login.html'
 } else {
   console.log(jwtToken)
 }
