@@ -13,7 +13,7 @@ if (localStorage.getItem('loginName')) {
   document.getElementById('loginName').textContent = `Hello ${localStorage.getItem('loginName')}`
 }
 
-function applyFilter() {
+async function applyFilter() {
   // Lấy giá trị từ form
   const filterOn = document.getElementById('filterOn').value
   const filterQuery = document.getElementById('filterQuery').value
@@ -22,7 +22,7 @@ function applyFilter() {
   // Gọi getAllWalks với các tham số filter
   getAllWalks(filterOn, filterQuery, sortBy, isAscending)
 }
-function changePage(change) {
+async function changePage(change) {
   pageNumber += change
   if (pageNumber < 1) pageNumber = 1 // Đảm bảo không dưới trang 1
   applyFilter()
@@ -74,7 +74,7 @@ async function getAllWalks(filterOn = null, filterQuery = null, sortBy = null, i
 }
 
 //hiển thị form AddWalk
-function toggleAddWalkForm() {
+async function toggleAddWalkForm() {
   // Lấy phần tử addWalkForm
   const addWalkForm = document.getElementById('addWalkForm')
   // Hiển thị hoặc ẩn form khi nhấn nút Add
@@ -85,7 +85,7 @@ function toggleAddWalkForm() {
   }
 }
 //lấy data từ input rồi truyền vào gọi về API , add
-function callCreateWalk() {
+async function callCreateWalk() {
   const name = document.getElementById('walkName').value
   const description = document.getElementById('walkDescription').value
   const length = parseFloat(document.getElementById('walkLength').value)
@@ -128,7 +128,7 @@ async function createWalk(walkData) {
 }
 
 //lấy data từ input rồi truyền vào gọi về API, get single
-function callGetWalkById() {
+async function callGetWalkById() {
   const walkId = document.getElementById('walkId').value.trim()
   if (walkId === null) {
     alert('You forgot to input the WalkId!!!')
@@ -158,7 +158,7 @@ async function getWalkById(walkId) {
 }
 
 //lấy data rồi bỏ vào form Update xong hiện form ra
-function showUpdateForm(walk) {
+async function showUpdateForm(walk) {
   const form = document.getElementById('updateForm')
   form.style.display = 'block' // Hiển thị form cập nhật
 
@@ -175,7 +175,7 @@ function showUpdateForm(walk) {
   document.getElementById('updateForm').dataset.walkId = walk.id
 }
 //lấy data đã được thay đổi rồi truyền vào gọi về API , update
-function submitUpdatedWalk() {
+async function submitUpdatedWalk() {
   const walkId = document.getElementById('updateForm').dataset.walkId // Lấy id của walk
   if (!walkId) {
     alert('Invalid Walk ID')
@@ -217,7 +217,7 @@ async function updateWalk(id, updatedData) {
   }
 }
 //cancel
-function cancelUpdate() {
+async function cancelUpdate() {
   document.getElementById('updateForm').style.display = 'none'
 }
 
