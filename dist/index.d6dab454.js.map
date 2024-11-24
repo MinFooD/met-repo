@@ -1,1 +1,0 @@
-{"mappings":"AAAA,OAAO,MAAM,GAAG;IACd,sDAAsD;IACtD,YAAY;AACd","sources":["js/config.js"],"sourcesContent":["window.config = {\r\n  // apiBaseUrl: 'localhost:7082', // URL khi chạy local\r\n  apiBaseUrl: 'met20241121211402.azurewebsites.net', // Hoặc URL khi deploy\r\n}\r\n"],"names":[],"version":3,"file":"index.d6dab454.js.map","sourceRoot":"/__parcel_source_root/"}
