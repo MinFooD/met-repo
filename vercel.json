@@ -1,16 +1,16 @@
 {
   "routes": [
     {
-      "src": "/html/index.html",
+      "src": "/",
       "dest": "/html/index.html"
     },
     {
-      "src": "/html/register.html",
-      "dest": "/html/register.html"
+      "src": "/login",
+      "dest": "/html/login.html"
     },
     {
-      "src": "/html/login.html",
-      "dest": "/html/login.html"
+      "src": "/register",
+      "dest": "/html/register.html"
     }
   ]
 }
