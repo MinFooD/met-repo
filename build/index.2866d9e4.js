@@ -1,0 +1,2 @@
+document.addEventListener("DOMContentLoaded",()=>{let e=localStorage.getItem("logoutMessage");e&&(alert(e),localStorage.removeItem("logoutMessage"));let t=document.getElementById("CheckboxLarge"),n=document.getElementById("checkboxLabel");function o(){let e=t.checked?"Writer":"Reader";n.textContent!==e&&(n.textContent=e)}null!=t&&(t.addEventListener("change",o),o())});
+//# sourceMappingURL=index.2866d9e4.js.map

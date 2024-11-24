@@ -11,7 +11,10 @@ document.addEventListener('DOMContentLoaded', () => {
   const label = document.getElementById('checkboxLabel')
 
   function updateLabel() {
-    label.textContent = checkbox.checked ? 'Writer' : 'Reader'
+    const currentLabel = checkbox.checked ? 'Writer' : 'Reader'
+    if (label.textContent !== currentLabel) {
+      label.textContent = currentLabel
+    }
   }
   if (checkbox != null) {
     // Lắng nghe sự kiện thay đổi của checkbox
