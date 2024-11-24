@@ -63,13 +63,6 @@ async function login(user) {
   }
 }
 
-async function logout() {
-  // Xóa JWT khỏi localStorage và chuyển hướng
-  localStorage.removeItem('jwtToken')
-  window.location.href = '/login'
-  localStorage.setItem('logoutMessage', 'Logout succeeded!')
-}
-
 async function callRegister() {
   const username = document.getElementById('username').value
   const password = document.getElementById('password').value
@@ -117,7 +110,6 @@ const globalFunctions = {
   login,
   callLogin,
   callRegister,
-  logout,
 }
 
 Object.keys(globalFunctions).forEach((key) => {

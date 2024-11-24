@@ -11,6 +11,14 @@
     {
       "src": "/register",
       "dest": "/register.html"
+    },
+    {
+      "src": "/js/(.*)",
+      "dest": "/js/$1"
+    },
+    {
+      "src": "/css/(.*)",
+      "dest": "/css/$1"
     }
   ]
 }
