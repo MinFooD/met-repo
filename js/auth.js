@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 })
 
-function callLogin() {
+async function callLogin() {
   const username = document.getElementById('username').value
   const password = document.getElementById('password').value
 
@@ -35,7 +35,7 @@ function callLogin() {
   }
   console.log(window.config.apiBaseUrl)
 
-  login(user)
+  await login(user)
 }
 
 async function login(user) {
