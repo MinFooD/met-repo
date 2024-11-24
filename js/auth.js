@@ -111,3 +111,15 @@ async function Register(account) {
     console.error('Error:', error)
   }
 }
+
+const globalFunctions = {
+  Register,
+  login,
+  callLogin,
+  callRegister,
+  logout,
+}
+
+Object.keys(globalFunctions).forEach((key) => {
+  window[key] = globalFunctions[key]
+})

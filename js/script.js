@@ -315,3 +315,26 @@ function displayResult(walks) {
   resultDiv.appendChild(table)
   resultDiv.appendChild(paginationDiv)
 }
+
+const globalFunctions = {
+  pageNumber,
+  pageSize,
+  applyFilter,
+  changePage,
+  getAllWalks,
+  toggleAddWalkForm,
+  callCreateWalk,
+  createWalk,
+  callGetWalkById,
+  getWalkById,
+  showUpdateForm,
+  submitUpdatedWalk,
+  updateWalk,
+  cancelUpdate,
+  deleteWalk,
+  displayResult,
+}
+
+Object.keys(globalFunctions).forEach((key) => {
+  window[key] = globalFunctions[key]
+})

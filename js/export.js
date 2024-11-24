@@ -29,3 +29,11 @@ async function exportExcel() {
     console.error('Có lỗi xảy ra:', error.message)
   }
 }
+
+const globalFunctions = {
+  exportExcel,
+}
+
+Object.keys(globalFunctions).forEach((key) => {
+  window[key] = globalFunctions[key]
+})
