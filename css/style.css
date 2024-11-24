@@ -1,0 +1,207 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+}
+h1 {
+  color: #333;
+}
+button {
+  padding: 10px 20px;
+  margin: 10px 0;
+  cursor: pointer;
+}
+#result div {
+  margin: 5px 0;
+  padding: 5px;
+  border-bottom: 1px solid #ddd;
+}
+#loginWalkForm,
+#updateForm,
+#addWalkForm {
+  display: none;
+  width: 300px;
+  /* margin: 0 auto; */
+  margin-top: 20px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+#loginWalkForm {
+  display: block;
+}
+.parent {
+  display: flex;
+  justify-content: center; /* Căn giữa theo chiều ngang */
+  align-items: center;
+  height: 80vh;
+}
+.row {
+  display: flex;
+  align-items: center; /* Căn giữa theo chiều dọc */
+}
+
+.row h1 {
+  margin: 0; /* Loại bỏ khoảng cách mặc định của thẻ h1 */
+  padding-right: 10px; /* Thêm khoảng cách bên phải nếu muốn */
+}
+#addWalkForm h3 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 14px;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.form-group input {
+  width: 95%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.form-group input:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.form-group button {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  background-color: #007bff;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.form-group button:hover {
+  background-color: #0056b3;
+}
+.form-group input[type='radio'] {
+  margin-right: 10px;
+  accent-color: #4caf50; /* Đổi màu của radio button */
+}
+.form-group label:first-of-type {
+  font-weight: bold;
+  margin-bottom: 10px;
+  display: block;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 30px;
+}
+th,
+td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+th {
+  background-color: #f2f2f2;
+}
+.u {
+  display: block;
+  unicode-bidi: isolate;
+}
+.Toggle input[type='checkbox'] {
+  position: absolute;
+  left: -100vw;
+}
+.Toggle input[type='checkbox'] + label {
+  position: relative;
+  display: block;
+  line-height: 3rem;
+  cursor: pointer;
+  white-space: nowrap;
+}
+.Toggle input[type='checkbox'] + label::before,
+.Toggle input[type='checkbox'] + label::after {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  transition: 0.5s;
+}
+.Toggle__large input[type='checkbox'] + label {
+  font-size: 2rem;
+  line-height: 6rem;
+}
+.Toggle input[type='checkbox'] + label {
+  padding-left: 5rem;
+}
+.Toggle input[type='checkbox'] + label::before {
+  width: 4rem;
+  aspect-ratio: 2 / 1;
+  border-radius: 1rem;
+  background: #eee;
+}
+.Toggle input[type='checkbox']:checked + label::before {
+  background: #ddf8eb;
+}
+.Toggle input[type='checkbox'] + label::after {
+  left: 0.25rem;
+  width: 1.4rem;
+}
+.Toggle input[type='checkbox']:checked + label::after {
+  animation: toggle 0.5s linear;
+  transform: translate(125%, -50%);
+}
+.Toggle__large input[type='checkbox'] + label {
+  padding-left: 9rem;
+}
+.Toggle__large input[type='checkbox'] + label::before {
+  width: 8rem;
+  border-radius: 2rem;
+}
+.Toggle__large input[type='checkbox'] + label::after {
+  left: 0.5rem;
+  width: 3rem;
+}
+
+.Toggle input[type='checkbox'] + label::after {
+  aspect-ratio: 1 / 1;
+  border: 0.1rem solid #fff;
+  border-radius: 50%;
+  background: radial-gradient(circle at 70% 30%, #fff, rgba(0, 0, 0, 0) 25%),
+    radial-gradient(circle at 60% 55%, rgba(0, 0, 0, 0) 60%, rgba(255, 0, 255, 0.8) 100%),
+    radial-gradient(circle at 50% 50%, rgba(0, 0, 0, 0) 40%, rgba(0, 255, 255, 0.2) 60%, rgba(0, 0, 0, 0) 68%),
+    radial-gradient(circle at 50% 55%, rgba(0, 0, 0, 0) 35%, rgba(255, 255, 0, 0.2) 45%, rgba(0, 0, 0, 0) 55%);
+}
+@keyframes toggle {
+  0% {
+    transform: translate(0, -50%);
+  }
+  25% {
+    transform: translate(32%, -75%);
+  }
+  35% {
+    transform: translate(44.8%, -75%);
+  }
+  65% {
+    transform: translate(84.06%, -40%);
+  }
+  75% {
+    transform: translate(96%, -40%);
+  }
+  100% {
+    transform: translate(125%, -50%);
+  }
+}

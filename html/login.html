@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Walks Frontend</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <!-- Link to CSS (optional) -->
+  </head>
+
+  <body>
+    <div class="parent">
+      <div id="loginWalkForm">
+        <h3>Login Form</h3>
+        <form id="walkForm">
+          <div class="form-group">
+            <label for="username">Username:</label>
+            <input type="text" id="username" placeholder="Enter Username" />
+          </div>
+
+          <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="text" id="password" placeholder="Enter Password" />
+          </div>
+
+          <div class="form-group">
+            <button type="button" onclick="callLogin()">Login</button>
+          </div>
+          <div class="form-group">
+            <button type="button" onclick="window.location.href ='register.html'">Register</button>
+          </div>
+          <div id="errorMessage"></div>
+        </form>
+      </div>
+    </div>
+    <script src="/js/auth.js"></script>
+    <script src="/js/config.js"></script>
+  </body>
+</html>

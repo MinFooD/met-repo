@@ -1,0 +1,57 @@
+// các chức năng trong js thường được sử dụng (mục đích là hỗ trợ cho việc call API)
+const response = await fetch('https://localhost:7082/api/Walks', {
+  method: 'POST',
+  headers: { 'Content-Type': 'application/json' },
+  body: JSON.stringify(walkData), // Dữ liệu Walk mới từ đối tượng `walkData`
+}) // lấy kết quả trả về sau khi call API, response ở đây là các trạng thái (200, 400, 404 ..... ok)
+
+if (response.ok) {
+  const createdWalk = await response.json()
+} // cú pháp quen thuộc, ko lấy trạng thái nữa mà là lấy object được trả về dưới dạng json
+
+addWalkForm.style.display = 'block' // thay đổi style của các thẻ div
+
+const regionId = document.getElementById('regionId').value // lấy value trong ô input có id là regionId
+
+  {
+      var conversations = await _messageService.ListAllMessage(userId);
+      var groupedConversations = conversations
+          .GroupBy(m => m.ToUserId == userId ? m.UserId : m.ToUserId)
+          .ToList();
+
+      var userIds = groupedConversations.Select(g => g.Key).Distinct().ToList();
+
+      var users = await _userManager.Users.Where(u => userIds.Contains(u.Id)).ToListAsync();
+
+      var conversationList = groupedConversations
+          .Select(g =>
+          {
+              var lastMessage = g.OrderByDescending(m => m.CreatedDate).FirstOrDefault();
+              var messageModel = _mapper.Map<MessageModel>(lastMessage);
+
+              if (messageModel.UserId != null)
+              {
+                if(userId == messageModel.UserId){
+                  var user = users.FirstOrDefault(u => u.Id == messageModel.ToUserId);
+                  if (user != null)
+                  {
+                      messageModel.UserAvatar = user.Avatar;
+                      messageModel.UserName = user.FullName;
+                  }
+                }else if(userId == messageModel.ToUserId){
+                  var user = users.FirstOrDefault(u => u.Id == messageModel.UserId);
+                  if (user != null)
+                  {
+                      messageModel.UserAvatar = user.Avatar;
+                      messageModel.UserName = user.FullName;
+                  }
+                }
+                  
+              }
+
+              return messageModel;
+          })
+          .ToList();
+
+      await Clients.Caller.SendAsync("LoadConversations", conversationList);
+  }
