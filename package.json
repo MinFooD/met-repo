@@ -1,10 +1,9 @@
 {
-  "name": "your-project-name",
+  "name": "met-qua-di",
   "version": "1.0.0",
   "scripts": {
-    "start": "parcel html/index.html",
-    "build": "parcel build html/index.html --out-dir build"
-  },
+    "start": "parcel html/index.html",  
+    "build": "parcel build html/index.html --dist-dir build" ,
   "devDependencies": {
     "parcel": "^2.13.0"
   }
