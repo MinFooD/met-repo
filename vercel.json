@@ -1,18 +1,18 @@
 {
-  "builds": [
-    {
-      "src": "html/index.html",
-      "use": "@vercel/static"
-    },
-    {
-      "src": "html/register.html",
-      "use": "@vercel/static"
-    },
-    {
-      "src": "html/login.html",
-      "use": "@vercel/static"
-    }
-  ],
+  // "builds": [
+  //   {
+  //     "src": "html/index.html",
+  //     "use": "@vercel/static"
+  //   },
+  //   {
+  //     "src": "html/register.html",
+  //     "use": "@vercel/static"
+  //   },
+  //   {
+  //     "src": "html/login.html",
+  //     "use": "@vercel/static"
+  //   }
+  // ],
   "routes": [
     {
       "src": "/",
