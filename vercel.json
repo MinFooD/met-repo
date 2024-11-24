@@ -2,15 +2,15 @@
   "routes": [
     {
       "src": "/html/index.html",
-      "dest": "/"
+      "dest": "/html/index.html"
     },
     {
       "src": "/html/register.html",
-      "dest": "/"
+      "dest": "/html/register.html"
     },
     {
       "src": "/html/login.html",
-      "dest": "/"
+      "dest": "/html/login.html"
     }
   ]
 }
