@@ -13,12 +13,13 @@ document.addEventListener('DOMContentLoaded', () => {
   function updateLabel() {
     label.textContent = checkbox.checked ? 'Writer' : 'Reader'
   }
+  if (checkbox != null) {
+    // Lắng nghe sự kiện thay đổi của checkbox
+    checkbox.addEventListener('change', updateLabel)
 
-  // Lắng nghe sự kiện thay đổi của checkbox
-  checkbox.addEventListener('change', updateLabel)
-
-  // Thiết lập nhãn ban đầu khi trang tải
-  updateLabel()
+    // Thiết lập nhãn ban đầu khi trang tải
+    updateLabel()
+  }
 })
 
 function callLogin() {

@@ -1,0 +1,233 @@
+* {
+  box-sizing: border-box;
+  font-family: Poppins, sans-serif;
+}
+
+body {
+  margin: 20px;
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  color: #333;
+}
+
+button {
+  cursor: pointer;
+  margin: 10px 0;
+  padding: 10px 20px;
+}
+
+#result div {
+  border-bottom: 1px solid #ddd;
+  margin: 5px 0;
+  padding: 5px;
+}
+
+#loginWalkForm, #updateForm, #addWalkForm {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  width: 300px;
+  margin-top: 20px;
+  padding: 20px;
+  display: none;
+}
+
+#loginWalkForm {
+  display: block;
+}
+
+.parent {
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  display: flex;
+}
+
+.row {
+  align-items: center;
+  display: flex;
+}
+
+.row h1 {
+  margin: 0;
+  padding-right: 10px;
+}
+
+#addWalkForm h3 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  color: #333;
+  margin-bottom: 5px;
+  font-size: 14px;
+  display: block;
+}
+
+.form-group input {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 95%;
+  padding: 8px;
+  font-size: 14px;
+}
+
+.form-group input:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.form-group button {
+  color: #fff;
+  cursor: pointer;
+  background-color: #007bff;
+  border: none;
+  border-radius: 4px;
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+}
+
+.form-group button:hover {
+  background-color: #0056b3;
+}
+
+.form-group input[type="radio"] {
+  accent-color: #4caf50;
+  margin-right: 10px;
+}
+
+.form-group label:first-of-type {
+  margin-bottom: 10px;
+  font-weight: bold;
+  display: block;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-top: 30px;
+}
+
+th, td {
+  text-align: left;
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+.u {
+  unicode-bidi: isolate;
+  display: block;
+}
+
+.Toggle input[type="checkbox"] {
+  position: absolute;
+  left: -100vw;
+}
+
+.Toggle input[type="checkbox"] + label {
+  cursor: pointer;
+  white-space: nowrap;
+  line-height: 3rem;
+  display: block;
+  position: relative;
+}
+
+.Toggle input[type="checkbox"] + label:before, .Toggle input[type="checkbox"] + label:after {
+  content: "";
+  transition: all .5s;
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+
+.Toggle__large input[type="checkbox"] + label {
+  font-size: 2rem;
+  line-height: 6rem;
+}
+
+.Toggle input[type="checkbox"] + label {
+  padding-left: 5rem;
+}
+
+.Toggle input[type="checkbox"] + label:before {
+  aspect-ratio: 2;
+  background: #eee;
+  border-radius: 1rem;
+  width: 4rem;
+}
+
+.Toggle input[type="checkbox"]:checked + label:before {
+  background: #ddf8eb;
+}
+
+.Toggle input[type="checkbox"] + label:after {
+  width: 1.4rem;
+  left: .25rem;
+}
+
+.Toggle input[type="checkbox"]:checked + label:after {
+  animation: .5s linear toggle;
+  transform: translate(125%, -50%);
+}
+
+.Toggle__large input[type="checkbox"] + label {
+  padding-left: 9rem;
+}
+
+.Toggle__large input[type="checkbox"] + label:before {
+  border-radius: 2rem;
+  width: 8rem;
+}
+
+.Toggle__large input[type="checkbox"] + label:after {
+  width: 3rem;
+  left: .5rem;
+}
+
+.Toggle input[type="checkbox"] + label:after {
+  aspect-ratio: 1;
+  background: radial-gradient(circle at 70% 30%, #fff, #0000 25%), radial-gradient(circle at 60% 55%, #0000 60%, #f0fc 100%), radial-gradient(circle, #0000 40%, #0ff3 60%, #0000 68%), radial-gradient(circle at 50% 55%, #0000 35%, #ff03 45%, #0000 55%);
+  border: .1rem solid #fff;
+  border-radius: 50%;
+}
+
+@keyframes toggle {
+  0% {
+    transform: translate(0, -50%);
+  }
+
+  25% {
+    transform: translate(32%, -75%);
+  }
+
+  35% {
+    transform: translate(44.8%, -75%);
+  }
+
+  65% {
+    transform: translate(84.06%, -40%);
+  }
+
+  75% {
+    transform: translate(96%, -40%);
+  }
+
+  100% {
+    transform: translate(125%, -50%);
+  }
+}
+/*# sourceMappingURL=index.b2625c6b.css.map */
