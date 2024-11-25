@@ -1,8 +1,8 @@
 # Ignore node_modules directory (contains installed dependencies)
 node_modules/
 
-# Ignore build directory (contains optimized build output)
-build/
+# # Ignore build directory (contains optimized build output)
+# build/
 
 # Ignore log files and temporary files
 *.log
