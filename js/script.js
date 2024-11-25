@@ -2,6 +2,17 @@
 let pageNumber = 1
 const pageSize = 5
 
+export let jwtToken = localStorage.getItem('jwtToken')
+
+export function validateJwtToken() {
+  if (!jwtToken) {
+    localStorage.removeItem('jwtToken')
+    window.location.href = '/login'
+  } else {
+    console.log(jwtToken)
+  }
+}
+
 if (localStorage.getItem('loginName')) {
   document.getElementById('loginName').textContent = `Hello ${localStorage.getItem('loginName')}`
 }
@@ -337,6 +348,7 @@ const globalFunctions = {
   displayResult,
   logout,
   exportExcel,
+  validateJwtToken,
 }
 
 Object.keys(globalFunctions).forEach((key) => {

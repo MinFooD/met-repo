@@ -1,3 +1,8 @@
+import { jwtToken, validateJwtToken } from '/js/script.js'
+
+console.log('Token before validation:', jwtToken)
+validateJwtToken()
+
 export async function exportExcel() {
   try {
     // Gửi yêu cầu để lấy file từ API
