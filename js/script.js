@@ -1,13 +1,6 @@
 // document.addEventListener('DOMContentLoaded', getAllWalks)
 let pageNumber = 1
 const pageSize = 5
-const jwtToken = localStorage.getItem('jwtToken')
-// Nếu chưa có token, chuyển hướng về login.html
-if (!jwtToken) {
-  window.location.href = '/login'
-} else {
-  console.log(jwtToken)
-}
 
 if (localStorage.getItem('loginName')) {
   document.getElementById('loginName').textContent = `Hello ${localStorage.getItem('loginName')}`
