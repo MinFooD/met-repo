@@ -3,9 +3,14 @@
   "version": "1.0.0",
   "scripts": {
     "start": "parcel html/index.html",
-    "build": "parcel build html/*.html --dist-dir build"
+    "build": "parcel build html/*.html --dist-dir build && cp public/OneSignalSDKWorker.js build/"
   },
   "devDependencies": {
-    "parcel": "^2.13.0"
+    "parcel": "^2.13.0",
+    "parcel-reporter-static-files-copy": "^1.6.0"
+  },
+  "staticFiles": {
+    "staticPath": "./public",
+    "staticOutDir": "./"
   }
 }
