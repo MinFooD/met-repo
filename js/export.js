@@ -1,8 +1,13 @@
-import { jwtToken, validateJwtToken } from '/js/script.js'
-
-validateJwtToken()
+import { jwtToken, updateJwtToken } from '/js/script.js'
 
 export async function exportExcel() {
+  updateJwtToken() // Cập nhật `jwtToken` trước khi sử dụng
+
+  if (!jwtToken) {
+    alert('Bạn chưa đăng nhập. Vui lòng đăng nhập để sử dụng chức năng này.')
+    window.location.href = '/login'
+    return
+  }
   try {
     // Gửi yêu cầu để lấy file từ API
     const response = await fetch(`https://${window.config.apiBaseUrl}/api/Export`, {

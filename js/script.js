@@ -4,16 +4,17 @@ const pageSize = 5
 
 export let jwtToken = localStorage.getItem('jwtToken')
 
-export function validateJwtToken() {
-  if (!jwtToken) {
-    localStorage.removeItem('jwtToken')
-    window.location.href = '/login'
-  } else {
-    console.log(jwtToken)
-  }
+if (!jwtToken) {
+  localStorage.removeItem('jwtToken')
+  window.location.href = '/login'
+} else {
+  console.log(jwtToken)
 }
 
-validateJwtToken()
+// Khi `jwtToken` thay đổi, cập nhật giá trị
+export function updateJwtToken() {
+  jwtToken = localStorage.getItem('jwtToken')
+}
 
 if (localStorage.getItem('loginName')) {
   document.getElementById('loginName').textContent = `Hello ${localStorage.getItem('loginName')}`
@@ -350,7 +351,7 @@ const globalFunctions = {
   displayResult,
   logout,
   exportExcel,
-  validateJwtToken,
+  jwtToken,
 }
 
 Object.keys(globalFunctions).forEach((key) => {
