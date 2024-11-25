@@ -343,6 +343,7 @@ const globalFunctions = {
   deleteWalk,
   displayResult,
   logout,
+  exportExcel,
 }
 
 Object.keys(globalFunctions).forEach((key) => {
