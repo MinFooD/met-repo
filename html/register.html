@@ -4,6 +4,19 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Walks Frontend</title>
+
+    <!-- cấu hình cho notification -->
+    <script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
+    <script>
+      window.OneSignalDeferred = window.OneSignalDeferred || []
+      OneSignalDeferred.push(async function (OneSignal) {
+        await OneSignal.init({
+          appId: '523487ee-5286-415a-8973-77cbd85d83bb',
+          serviceWorkerPath: '/OneSignalSDKWorker.js', // Đường dẫn đến file worker
+        })
+      })
+    </script>
+
     <link rel="stylesheet" href="/css/style.css" />
   </head>
 
