@@ -13,6 +13,8 @@ export function validateJwtToken() {
   }
 }
 
+validateJwtToken()
+
 if (localStorage.getItem('loginName')) {
   document.getElementById('loginName').textContent = `Hello ${localStorage.getItem('loginName')}`
 }
