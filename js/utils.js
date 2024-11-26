@@ -1,24 +1,26 @@
-export async function initializeOneSignal(externalId) {
-  try {
-    // Khởi tạo OneSignal
-    await OneSignal.init({
-      appId: '523487ee-5286-415a-8973-77cbd85d83bb',
-      serviceWorkerPath: '/OneSignalSDKWorker.js',
-      promptOptions: {
-        slidedown: {
-          enabled: true, // Cho phép hiển thị yêu cầu thông báo
+async function initializeOneSignal(externalId) {
+  if (window.OneSignal) {
+    try {
+      await OneSignal.init({
+        appId: '523487ee-5286-415a-8973-77cbd85d83bb',
+        serviceWorkerPath: '/OneSignalSDKWorker.js', // Đường dẫn tới service worker
+        promptOptions: {
+          slidedown: {
+            enabled: true,
+          },
         },
-      },
-    })
+      })
 
-    // Gán external_id cho người dùng
-    await OneSignal.setExternalUserId(externalId)
-    console.log('external_id đã được gán:', externalId)
+      console.log('OneSignal initialized successfully.')
+      await OneSignal.setExternalUserId(externalId)
+      console.log('Assigned external user ID:', externalId)
 
-    // Hiển thị yêu cầu thông báo
-    await OneSignal.showSlidedownPrompt()
-    console.log('Yêu cầu thông báo đã hiển thị.')
-  } catch (error) {
-    console.error('Lỗi khi khởi tạo hoặc hiển thị thông báo:', error)
+      await OneSignal.showSlidedownPrompt()
+      console.log('Displayed subscription prompt.')
+    } catch (error) {
+      console.error('Failed to initialize OneSignal:', error)
+    }
+  } else {
+    console.error('OneSignal SDK chưa được tải.')
   }
 }

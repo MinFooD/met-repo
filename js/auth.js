@@ -23,6 +23,9 @@ document.addEventListener('DOMContentLoaded', () => {
     // Thiết lập nhãn ban đầu khi trang tải
     updateLabel()
   }
+  if (!window.OneSignal) {
+    console.error('OneSignal chưa được tải. Vui lòng kiểm tra.')
+  }
 })
 
 import { initializeOneSignal } from '/js/utils.js'
@@ -100,7 +103,11 @@ async function Register(account, externalId) {
       console.log('Registration Successful:', message)
 
       alert(message)
-      await initializeOneSignal(externalId)
+      try {
+        await initializeOneSignal(externalId)
+      } catch (error) {
+        console.warn('Failed to initialize OneSignal:', error)
+      }
       window.location.href = '/login'
     } else {
       const errorMessage = await response.text()
