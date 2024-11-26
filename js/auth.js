@@ -23,11 +23,11 @@ document.addEventListener('DOMContentLoaded', () => {
     // Thiết lập nhãn ban đầu khi trang tải
     updateLabel()
   }
-  if (!window.OneSignal) {
-    console.error('OneSignal chưa được tải. Vui lòng kiểm tra.')
-  } else {
-    console.error('OneSignal đã được tải. Vui lòng kiểm tra.')
-  }
+  // if (!window.OneSignal) {
+  //   console.error('OneSignal chưa được tải. Vui lòng kiểm tra.')
+  // } else {
+  //   console.error('OneSignal đã được tải. Vui lòng kiểm tra.')
+  // }
 })
 
 // import { initializeOneSignal } from '/js/utils.js'
