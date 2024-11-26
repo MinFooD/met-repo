@@ -13,6 +13,11 @@
         await OneSignal.init({
           appId: '523487ee-5286-415a-8973-77cbd85d83bb',
           serviceWorkerPath: '/OneSignalSDKWorker.js', // Đường dẫn đến file worker
+          promptOptions: {
+            slidedown: {
+              enabled: true, // Hiển thị thông báo yêu cầu nhận thông báo
+            },
+          },
         })
       })
     </script>

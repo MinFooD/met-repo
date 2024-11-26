@@ -25,6 +25,8 @@ document.addEventListener('DOMContentLoaded', () => {
   }
   if (!window.OneSignal) {
     console.error('OneSignal chưa được tải. Vui lòng kiểm tra.')
+  } else {
+    console.error('OneSignal đã được tải. Vui lòng kiểm tra.')
   }
 })
 
