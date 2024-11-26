@@ -153,7 +153,7 @@ const globalFunctions = {
   login,
   callLogin,
   callRegister,
-  initializeOneSignal,
+  // initializeOneSignal,
 }
 
 Object.keys(globalFunctions).forEach((key) => {
