@@ -33,7 +33,7 @@
 74C:\Users\PHUC\Downloads\WalksFE\node_modules\@swc\helpers\cjs\_dispose.cjs133769146240261140 0
 91C:\Users\PHUC\Downloads\WalksFE\node_modules\@parcel\package-manager\test\fixtures\packages133769146236699643 1
 76C:\Users\PHUC\Downloads\WalksFE\node_modules\weak-lru-cache\rollup.config.js133769146231510511 0
-37C:\Users\PHUC\Downloads\WalksFE\build133771112915085166 1
+37C:\Users\PHUC\Downloads\WalksFE\build133771156865881857 1
 104C:\Users\PHUC\Downloads\WalksFE\node_modules\lmdb\dependencies\lmdb-data-v1\libraries\liblmdb\mdb_stat.1133769146238573003 0
 61C:\Users\PHUC\Downloads\WalksFE\node_modules\lmdb\binding.gyp133769146244382244 0
 59C:\Users\PHUC\Downloads\WalksFE\node_modules\supports-color133769146230488073 1
@@ -320,7 +320,7 @@
 101C:\Users\PHUC\Downloads\WalksFE\node_modules\lmdb\dependencies\lmdb-data-v1\libraries\liblmdb\mtest.c133769146241989642 0
 57C:\Users\PHUC\Downloads\WalksFE\node_modules\lightningcss133769146235577121 1
 49C:\Users\PHUC\Downloads\WalksFE\node_modules\lmdb133769146245882218 1
-48C:\Users\PHUC\Downloads\WalksFE\build\index.html133771112914849705 0
+48C:\Users\PHUC\Downloads\WalksFE\build\index.html133771156865692365 0
 55C:\Users\PHUC\Downloads\WalksFE\node_modules\micromatch133769146229796779 1
 53C:\Users\PHUC\Downloads\WalksFE\node_modules\msgpackr133769146241489496 1
 67C:\Users\PHUC\Downloads\WalksFE\node_modules\color-convert\index.js133769146230079161 0
@@ -531,7 +531,7 @@
 107C:\Users\PHUC\Downloads\WalksFE\node_modules\@swc\helpers\_\_class_static_private_field_update\package.json133769146247533524 0
 83C:\Users\PHUC\Downloads\WalksFE\node_modules\@parcel\transformer-babel\lib\types.js133769146236689367 0
 88C:\Users\PHUC\Downloads\WalksFE\node_modules\posthtml\node_modules\entities\lib\index.js133769146234281636 0
-51C:\Users\PHUC\Downloads\WalksFE\build\register.html133771112914914788 0
+51C:\Users\PHUC\Downloads\WalksFE\build\register.html133771156865699075 0
 61C:\Users\PHUC\Downloads\WalksFE\node_modules\htmlnano\test.js133769146239290789 0
 108C:\Users\PHUC\Downloads\WalksFE\node_modules\lmdb\dependencies\lmdb-data-v1\libraries\liblmdb\sample-bdb.txt133769146245958609 0
 89C:\Users\PHUC\Downloads\WalksFE\node_modules\utility-types\dist\aliases-and-guards.js.map133769146233435517 0
@@ -2181,6 +2181,7 @@
 85C:\Users\PHUC\Downloads\WalksFE\node_modules\entities\lib\esm\decode_codepoint.js.map133769146238086015 0
 73C:\Users\PHUC\Downloads\WalksFE\node_modules\entities\lib\esm\encode.d.ts133769146241713599 0
 103C:\Users\PHUC\Downloads\WalksFE\node_modules\@parcel\package-manager\test\fixtures\has-foo\package.json133769146239472043 0
+59C:\Users\PHUC\Downloads\WalksFE\build\login.23de1dcf.js.map133771156865881857 0
 70C:\Users\PHUC\Downloads\WalksFE\node_modules\dotenv-expand\lib\main.js133769146229049466 0
 77C:\Users\PHUC\Downloads\WalksFE\node_modules\entities\lib\esm\encode.d.ts.map133769146240128211 0
 73C:\Users\PHUC\Downloads\WalksFE\node_modules\entities\lib\esm\escape.d.ts133769146241821116 0
@@ -2974,7 +2975,7 @@
 96C:\Users\PHUC\Downloads\WalksFE\node_modules\@swc\helpers\esm\_class_extract_field_descriptor.js133769146244612259 0
 118C:\Users\PHUC\Downloads\WalksFE\node_modules\@parcel\transformer-react-refresh-wrap\lib\ReactRefreshWrapTransformer.js133769146231658312 0
 91C:\Users\PHUC\Downloads\WalksFE\node_modules\caniuse-lite\data\features\meta-theme-color.js133769146254231831 0
-42C:\Users\PHUC\Downloads\WalksFE\js\auth.js133771112501120380 0
+42C:\Users\PHUC\Downloads\WalksFE\js\auth.js133771156521457806 0
 79C:\Users\PHUC\Downloads\WalksFE\node_modules\caniuse-lite\data\features\midi.js133769146254253471 0
 68C:\Users\PHUC\Downloads\WalksFE\node_modules\@parcel\optimizer-image133769146228866228 1
 75C:\Users\PHUC\Downloads\WalksFE\node_modules\@parcel\watcher\src\DirTree.hh133769146238328583 0
@@ -3057,7 +3058,7 @@
 82C:\Users\PHUC\Downloads\WalksFE\node_modules\caniuse-lite\data\features\svg-css.js133769146258710207 0
 86C:\Users\PHUC\Downloads\WalksFE\node_modules\caniuse-lite\data\features\svg-filters.js133769146258758967 0
 61C:\Users\PHUC\Downloads\WalksFE\node_modules\@parcel\core\src133769146246479368 1
-47C:\Users\PHUC\Downloads\WalksFE\html\index.html133771109028980812 0
+47C:\Users\PHUC\Downloads\WalksFE\html\index.html133771148467183734 0
 84C:\Users\PHUC\Downloads\WalksFE\node_modules\caniuse-lite\data\features\svg-fonts.js133769146258789920 0
 83C:\Users\PHUC\Downloads\WalksFE\node_modules\caniuse-lite\data\features\svg-html.js133769146258828364 0
 88C:\Users\PHUC\Downloads\WalksFE\node_modules\caniuse-lite\data\features\text-emphasis.js133769146259293299 0
@@ -3325,7 +3326,7 @@
 109C:\Users\PHUC\Downloads\WalksFE\node_modules\@swc\helpers\_\_class_static_private_field_spec_get\package.json133769146247533524 0
 98C:\Users\PHUC\Downloads\WalksFE\node_modules\@swc\helpers\_\_class_private_method_set\package.json133769146247533524 0
 98C:\Users\PHUC\Downloads\WalksFE\node_modules\@swc\helpers\_\_class_private_method_get\package.json133769146247363724 0
-55C:\Users\PHUC\Downloads\WalksFE\build\index.31bd022b.js133771112914914788 0
+55C:\Users\PHUC\Downloads\WalksFE\build\index.31bd022b.js133771156865699075 0
 100C:\Users\PHUC\Downloads\WalksFE\node_modules\@swc\helpers\_\_class_private_field_update\package.json133769146247363724 0
 103C:\Users\PHUC\Downloads\WalksFE\node_modules\@swc\helpers\_\_class_private_field_loose_key\package.json133769146247363724 0
 105C:\Users\PHUC\Downloads\WalksFE\node_modules\@swc\helpers\_\_class_private_field_destructure\package.json133769146247242616 0
@@ -3500,7 +3501,7 @@
 95C:\Users\PHUC\Downloads\WalksFE\node_modules\@swc\helpers\esm\_unsupported_iterable_to_array.js133769146246358161 0
 72C:\Users\PHUC\Downloads\WalksFE\node_modules\@parcel\workers\src\process133769146238968814 1
 75C:\Users\PHUC\Downloads\WalksFE\node_modules\@swc\helpers\esm\_using_ctx.js133769146246399754 0
-50C:\Users\PHUC\Downloads\WalksFE\html\register.html133771108997170572 0
+50C:\Users\PHUC\Downloads\WalksFE\html\register.html133771148344473991 0
 83C:\Users\PHUC\Downloads\WalksFE\node_modules\@swc\helpers\esm\_wrap_native_super.js133769146246404902 0
 71C:\Users\PHUC\Downloads\WalksFE\node_modules\@swc\helpers\cjs\index.cjs133769146243876249 0
 99C:\Users\PHUC\Downloads\WalksFE\node_modules\@parcel\rust\parcel-node-bindings.linux-arm64-gnu.node133769146253529819 0
@@ -4207,13 +4208,12 @@
 72C:\Users\PHUC\Downloads\WalksFE\node_modules\.bin\update-browserslist-db133769146263215008 0
 76C:\Users\PHUC\Downloads\WalksFE\node_modules\.bin\update-browserslist-db.cmd133769146263226246 0
 44C:\Users\PHUC\Downloads\WalksFE\js\script.js133770031944214103 0
-43C:\Users\PHUC\Downloads\WalksFE\js\utils.js133771065556313667 0
-47C:\Users\PHUC\Downloads\WalksFE\html\login.html133771109009441031 0
-56C:\Users\PHUC\Downloads\WalksFE\build\index.1def976c.css133771112914894702 0
-60C:\Users\PHUC\Downloads\WalksFE\build\index.1def976c.css.map133771112915010234 0
-59C:\Users\PHUC\Downloads\WalksFE\build\index.31bd022b.js.map133771112915010234 0
-55C:\Users\PHUC\Downloads\WalksFE\build\index.c1079dd7.js133771112914894702 0
-59C:\Users\PHUC\Downloads\WalksFE\build\index.c1079dd7.js.map133771112915050308 0
-55C:\Users\PHUC\Downloads\WalksFE\build\login.55ea5ebf.js133771112914914788 0
-59C:\Users\PHUC\Downloads\WalksFE\build\login.55ea5ebf.js.map133771112915060335 0
-48C:\Users\PHUC\Downloads\WalksFE\build\login.html133771112914914788 0
+43C:\Users\PHUC\Downloads\WalksFE\js\utils.js133771139647258584 0
+47C:\Users\PHUC\Downloads\WalksFE\html\login.html133771148392644915 0
+56C:\Users\PHUC\Downloads\WalksFE\build\index.1def976c.css133771156865699075 0
+60C:\Users\PHUC\Downloads\WalksFE\build\index.1def976c.css.map133771156865881857 0
+59C:\Users\PHUC\Downloads\WalksFE\build\index.31bd022b.js.map133771156865881857 0
+55C:\Users\PHUC\Downloads\WalksFE\build\index.c1079dd7.js133771156865699075 0
+59C:\Users\PHUC\Downloads\WalksFE\build\index.c1079dd7.js.map133771156865881857 0
+55C:\Users\PHUC\Downloads\WalksFE\build\login.23de1dcf.js133771156865699075 0
+48C:\Users\PHUC\Downloads\WalksFE\build\login.html133771156865699075 0

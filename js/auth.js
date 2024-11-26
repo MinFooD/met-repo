@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 })
 
-import { initializeOneSignal } from '/js/utils.js'
+// import { initializeOneSignal } from '/js/utils.js'
 
 async function callLogin() {
   const username = document.getElementById('username').value
@@ -60,6 +60,9 @@ async function login(user) {
     if (data.jwtToken) {
       localStorage.setItem('jwtToken', data.jwtToken)
       window.location.href = '/'
+      if (data.userId) {
+        localStorage.setItem('userId', data.userId) // Lưu userId vào localStorage
+      }
     } else {
       console.log('No Token! Please check.')
       document.getElementById('errorMessage').textContent = 'Token Failed'
@@ -85,11 +88,11 @@ async function callRegister() {
     roles: roles,
   }
   try {
-    // Lấy playerId từ OneSignal
-    const playerId = await getOneSignalPlayerId()
-    if (playerId) {
-      account.playerId = playerId // Thêm Player ID vào thông tin đăng ký
-    }
+    // // Lấy playerId từ OneSignal
+    // const playerId = await getOneSignalPlayerId()
+    // if (playerId) {
+    //   account.playerId = playerId // Thêm Player ID vào thông tin đăng ký
+    // }
     // Gọi Register để gửi thông tin người dùng lên backend
     await Register(account)
   } catch (error) {
@@ -110,7 +113,7 @@ async function Register(account) {
       console.log('Registration Successful:', message)
       alert(message)
       // Sau khi đăng ký thành công, thực hiện khởi tạo OneSignal
-      await initializeOneSignal(account.userName) // Gửi username làm externalId cho OneSignal
+      // await initializeOneSignal(account.userName) // Gửi username làm externalId cho OneSignal
 
       window.location.href = '/login'
     } else {
@@ -123,21 +126,25 @@ async function Register(account) {
     console.error('Error:', error)
   }
 }
-async function getOneSignalPlayerId() {
-  try {
-    const playerId = await OneSignal.getUserId()
-    console.log('Player ID from OneSignal:', playerId)
-    return playerId
-  } catch (error) {
-    console.error('Error getting playerId from OneSignal:', error)
-    return null
-  }
-}
+// async function getOneSignalPlayerId() {
+//   try {
+//     const playerId = await OneSignal.getUserId()
+//     console.log('Player ID from OneSignal:', playerId)
+//     return playerId
+//   } catch (error) {
+//     console.error('Error getting playerId from OneSignal:', error)
+//     return null
+//   }
+// }
 
 export async function logout() {
-  // Xóa JWT khỏi localStorage và chuyển hướng
-  localStorage.removeItem('jwtToken')
+  // Xóa tất cả dữ liệu trong localStorage
+  localStorage.clear()
+  // Gọi OneSignal.logout() để đăng xuất khỏi OneSignal
+  OneSignal.logout()
+  // Chuyển hướng đến trang login
   window.location.href = '/login'
+  // Lưu thông báo logout vào localStorage
   localStorage.setItem('logoutMessage', 'Logout succeeded!')
 }
 
@@ -147,7 +154,6 @@ const globalFunctions = {
   callLogin,
   callRegister,
   initializeOneSignal,
-  getOneSignalPlayerId,
 }
 
 Object.keys(globalFunctions).forEach((key) => {

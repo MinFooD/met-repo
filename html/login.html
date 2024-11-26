@@ -10,14 +10,23 @@
     <script>
       window.OneSignalDeferred = window.OneSignalDeferred || []
       OneSignalDeferred.push(async function (OneSignal) {
+        // Khởi tạo OneSignal
         await OneSignal.init({
           appId: '523487ee-5286-415a-8973-77cbd85d83bb',
           serviceWorkerPath: '/OneSignalSDKWorker.js', // Đường dẫn đến file worker
-          promptOptions: {
-            slidedown: {
-              enabled: true, // Hiển thị thông báo yêu cầu nhận thông báo
-            },
-          },
+        })
+
+        // Lắng nghe sự thay đổi trong đăng ký push
+        OneSignal.User.PushSubscription.addEventListener('change', function (event) {
+          if (event.current.token) {
+            console.log('Push subscription token has changed!')
+            // Gọi OneSignal.login với userId (external_id) sau khi token thay đổi
+            const userId = localStorage.getItem('userId') // Lấy userId từ localStorage
+            if (userId) {
+              OneSignal.login(userId) // Sử dụng userId làm external_id
+              console.log(`Logged in to OneSignal with userId: ${userId}`)
+            }
+          }
         })
       })
     </script>
