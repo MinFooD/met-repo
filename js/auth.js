@@ -25,6 +25,8 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 })
 
+import { initializeOneSignal } from '/js/utils.js'
+
 async function callLogin() {
   const username = document.getElementById('username').value
   const password = document.getElementById('password').value
@@ -73,15 +75,19 @@ async function callRegister() {
   console.log('Password:', password)
   console.log('Roles:', roles)
 
+  if (!username || !password) {
+    alert('Username and password cannot be empty.')
+    return
+  }
   var account = {
     userName: username,
     password: password,
     roles: roles,
   }
-  Register(account)
+  Register(account, username)
 }
 
-async function Register(account) {
+async function Register(account, externalId) {
   try {
     const response = await fetch(`https://${window.config.apiBaseUrl}/api/Auth/Register`, {
       method: 'POST',
@@ -92,7 +98,9 @@ async function Register(account) {
     if (response.ok) {
       const message = await response.text()
       console.log('Registration Successful:', message)
+
       alert(message)
+      await initializeOneSignal(externalId)
       window.location.href = '/login'
     } else {
       const errorMessage = await response.text()
@@ -117,6 +125,7 @@ const globalFunctions = {
   login,
   callLogin,
   callRegister,
+  initializeOneSignal,
 }
 
 Object.keys(globalFunctions).forEach((key) => {
